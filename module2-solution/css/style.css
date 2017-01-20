@@ -1,1 +1,97 @@
+/************ Base styles ************/
+/* Box model and font family defined */
+* {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+	font-family: Helvetica, Arial, sans-serif;
+}
 
+/* Body will accumulate to left (or right) sections margin, to make browser-section space equal to section-section space */
+body {
+	margin: auto 5px;
+}
+
+/*
+ * Top and bottom margins definition (according to my subjective view of mockups)
+ * Font size 75% bigger than default font, and certainly the text centered
+ */
+h1 {
+	margin-top: 25px;
+	margin-bottom: 35px;
+	text-align: center;
+	font-size: 1.75em;
+}
+
+/* This is inside the "responsive" column. Made relative to accomodate the section title (p.title below) and section content
+ * (p.content below) inside it. Margins were setup to match the body margins. Border and background color defined.
+ */
+section {
+	position: relative;
+	margin: 10px;
+	border: 1px solid black;
+	background-color: gray;
+}
+
+/* Positioning of section title box with width and border definition. Text font and size (25% bigger than default) defined
+ */
+p.title {
+	position : absolute;
+	top: 0%;
+	right: 0%;
+	width: 25%;
+	border: 1px solid black;
+	text-align: center;
+	font-size: 1.25em;
+}
+
+/* Color to section titles
+ */
+#s1 {background-color: #D59898;}
+#s2 {background-color: #C14543;}
+#s3 {background-color: #E5D198;}
+
+/* Margin top defined to avoid "coallition" with section title. Padding defined
+ */
+p.content {
+	margin-top: 1.25em;
+	padding : 1em;
+}
+
+
+
+/* Simple Responsive Framework. */
+.row {
+	width: 100%;
+}
+
+/********** Desktop view **********/
+@media (min-width: 992px) {
+	.col-dtp-4 {
+		float: left;
+		width: 33.33%;
+	}
+}
+
+/********** Tablet view **********/
+@media (min-width: 768px) and (max-width: 991px) {
+	.col-tbl-6, .col-tbl-12 {
+		float: left;
+	}
+
+	.col-tbl-6 {
+		width: 50%;
+	}
+
+	.col-tbl-12 {
+		width: 100%;
+	}
+}
+
+/********** Mobile view **********/
+@media (max-width: 767px) {
+	.col-mob-12 {
+		width: 100%;
+		float: left;
+	}
+}
