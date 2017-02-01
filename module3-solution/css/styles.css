@@ -1,1 +1,107 @@
+/* Font imitating the one in pictures */
+* {
+	font-family: 'Pangolin', cursive;
+}
 
+/* Define width and background-color of navbar */
+.navbar {
+	margin-left: -15px;
+	margin-right: -15px;
+	background-color: #C1C1C1;
+}
+
+/* Define color of text elements in navbar */
+.navbar-default .navbar-brand {
+	color: black;
+}
+
+/* Define color of drawing elements in navbar */
+.navbar-default .navbar-toggle {
+  border-color: black; /* for the rectangular part */
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: black; /* for the three lines in rectangle */
+}
+/* End of define color of drawing elements in navbar */
+
+/* Define height of header in navbar */
+.navbar-header {
+	height: 75px;
+}
+
+/* Define font of "Food, LLC" and placement inside navbar */
+.navbar-brand {
+	padding-left: 25px;
+	padding-top: 25px;  /*aprox. centering in navbar */
+	padding-bottom: 0px;
+	font-size: 36px;
+}
+
+/* Define placement (vertical centering by giving some top margin) to the navbar button  */
+.navbar-toggle {
+	margin-top: 17px;
+}
+
+/* Fix appearence of submenu */
+/* No margin on top of Chiken or after Sushi */
+ul.nav {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+/* Ruler between Chicken-Beef and Beef-Sushi  */
+hr {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	border: 0;
+	border-top: 1px solid black;
+	width: 99%; /* does not touch the border (in my opinion from picture of excercise) */
+}
+/* Color background, padding and border for "Chicken-Beef-Sushi"  */
+.navbar-default .navbar-nav > li > a {
+	color: black;
+	background-color: white;
+	padding: 0px;
+}
+/* Border around the "triad" Chicken-Beef-Sushi  */
+div#hidden-btn.navbar-collapse.collapse.in {
+	border: 1px solid black;
+}
+/* Remove border around the "triad" Chicken-Beef-Sushi in tablets and desktops */
+@media (min-width: 768px) {
+	div#hidden-btn.navbar-collapse.collapse.in {
+		border: 1px solid #C1C1C1;
+	}
+}
+/* End of fix appearence of submenu */
+
+/* Define margin of "Our menu" heading (centering between navbar and text)*/
+h1 {
+	margin-bottom: 40px;
+}
+
+/* Min height as defined in excercise, background color same as navbar  */
+section {
+	min-height: 1000px;
+	background-color: #C1C1C1;
+}
+
+/* Padging and margin of "Chicken" heading */
+h2 {
+	padding-top: 10px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+
+/* Padding and font size of main text  */
+p {
+	padding: 0 1em 1em 1em;
+	font-size: 16px;
+}
+
+/* Padding values defined to much the picture of mobile "look" */
+@media (max-width: 767px) {
+	.col-xs-12 {
+		padding-left: 80px;
+		padding-right: 80px;
+	}
+}
